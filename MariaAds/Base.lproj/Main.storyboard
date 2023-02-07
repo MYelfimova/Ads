@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vAf-1z-HH7">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Persistent Tab Bar Controller-->
+        <scene sceneID="mpR-PW-fLq">
+            <objects>
+                <tabBarController id="vAf-1z-HH7" customClass="PersistentTabBarController" customModule="MariaAds" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KET-Wc-fHH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="7o6-8q-TG3"/>
+                        <segue destination="04a-eo-Jbw" kind="relationship" relationship="viewControllers" id="Mqc-gT-I58"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEY-js-wxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1532" y="-168"/>
+        </scene>
+        <!--Rewarded-->
+        <scene sceneID="XsZ-q1-UAA">
+            <objects>
+                <viewController id="04a-eo-Jbw" userLabel="Rewarded" customClass="RewardedViewController" customModule="MariaAds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EgH-5R-XCg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbc-xk-MMz" userLabel="background">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="0.24838661042270282" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Impossible Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFB-8c-edM">
+                                <rect key="frame" x="8" y="109" width="377" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxS-XX-vyx">
+                                <rect key="frame" x="16" y="460.66666666666669" width="361" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="04a-eo-Jbw" eventType="touchUpInside" id="mg0-bw-5Mz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAV-Cu-5CK">
+                                <rect key="frame" x="125" y="411.66666666666669" width="143" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coins: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6a-kN-Fk9" userLabel="Label">
+                                <rect key="frame" x="36" y="698.66666666666663" width="63" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IOH-eF-lz7"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="rxS-XX-vyx" secondAttribute="leading" id="5EM-f7-V7b"/>
+                            <constraint firstItem="dAV-Cu-5CK" firstAttribute="centerX" secondItem="EgH-5R-XCg" secondAttribute="centerX" id="61b-1P-W3A"/>
+                            <constraint firstItem="IOH-eF-lz7" firstAttribute="trailing" secondItem="Gbc-xk-MMz" secondAttribute="trailing" id="7Tn-Wn-Mwy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rxS-XX-vyx" secondAttribute="trailing" id="ByV-ov-ovJ"/>
+                            <constraint firstItem="dAV-Cu-5CK" firstAttribute="centerY" secondItem="EgH-5R-XCg" secondAttribute="centerY" id="Cgn-z0-aAP"/>
+                            <constraint firstItem="Gbc-xk-MMz" firstAttribute="leading" secondItem="IOH-eF-lz7" secondAttribute="leading" id="FZY-ai-McX"/>
+                            <constraint firstItem="IOH-eF-lz7" firstAttribute="bottom" secondItem="W6a-kN-Fk9" secondAttribute="bottom" constant="50" id="I8u-9D-1SC"/>
+                            <constraint firstAttribute="bottom" secondItem="Gbc-xk-MMz" secondAttribute="bottom" id="Su1-DW-iNR"/>
+                            <constraint firstItem="W6a-kN-Fk9" firstAttribute="leading" secondItem="EgH-5R-XCg" secondAttribute="leading" constant="36" id="T1n-pI-Oku"/>
+                            <constraint firstItem="W6a-kN-Fk9" firstAttribute="leading" secondItem="EgH-5R-XCg" secondAttribute="leadingMargin" constant="20" id="Tcd-K6-ch6"/>
+                            <constraint firstItem="Gbc-xk-MMz" firstAttribute="top" secondItem="EgH-5R-XCg" secondAttribute="top" id="U4z-hw-Hab"/>
+                            <constraint firstItem="dAV-Cu-5CK" firstAttribute="centerX" secondItem="EgH-5R-XCg" secondAttribute="centerX" id="YHX-2o-a42"/>
+                            <constraint firstItem="Gbc-xk-MMz" firstAttribute="leading" secondItem="IOH-eF-lz7" secondAttribute="leading" id="YbO-Dl-tic"/>
+                            <constraint firstItem="Gbc-xk-MMz" firstAttribute="trailing" secondItem="IOH-eF-lz7" secondAttribute="trailing" id="bMH-oa-RP6"/>
+                            <constraint firstItem="TFB-8c-edM" firstAttribute="top" secondItem="IOH-eF-lz7" secondAttribute="top" constant="50" id="eM6-qg-prk"/>
+                            <constraint firstItem="dAV-Cu-5CK" firstAttribute="centerY" secondItem="EgH-5R-XCg" secondAttribute="centerY" id="gev-2g-YIC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TFB-8c-edM" secondAttribute="trailing" constant="-8" id="kJq-DW-wXv"/>
+                            <constraint firstItem="rxS-XX-vyx" firstAttribute="top" secondItem="dAV-Cu-5CK" secondAttribute="bottom" constant="20" id="m28-Hj-jKQ"/>
+                            <constraint firstItem="TFB-8c-edM" firstAttribute="leading" secondItem="EgH-5R-XCg" secondAttribute="leadingMargin" constant="-8" id="wpq-Xk-Ge4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="REWARDED" id="PnS-vR-3mc"/>
+                    <connections>
+                        <outlet property="coinCountLabel" destination="W6a-kN-Fk9" id="Sq7-HI-SvU"/>
+                        <outlet property="gameText" destination="dAV-Cu-5CK" id="TN6-yx-VYj"/>
+                        <outlet property="playAgainButton" destination="rxS-XX-vyx" id="OJB-kg-HnZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOm-Nd-WRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-495.41984732824426" y="253.52112676056339"/>
+        </scene>
+        <!--Interstitial-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Interstitial" customClass="InterstitialViewController" customModule="MariaAds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2hk-io-ine">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZ4-jP-rJP" userLabel="background">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="0.25080912002664529" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Impossible Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rot-Mg-xot">
+                                <rect key="frame" x="8" y="109" width="377" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yf-tb-JJ8">
+                                <rect key="frame" x="16" y="460.66666666666669" width="361" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oL2-eS-6Oa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sc0-G4-TfZ">
+                                <rect key="frame" x="125" y="411.66666666666669" width="143" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rh0-BL-yeg"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rZ4-jP-rJP" secondAttribute="bottom" id="06d-Ps-eqB"/>
+                            <constraint firstItem="rZ4-jP-rJP" firstAttribute="top" secondItem="2hk-io-ine" secondAttribute="top" id="6WK-em-Xel"/>
+                            <constraint firstItem="rZ4-jP-rJP" firstAttribute="leading" secondItem="Rh0-BL-yeg" secondAttribute="leading" id="6hI-Ll-Vog"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rot-Mg-xot" secondAttribute="trailing" constant="-8" id="8Rc-eu-4wo"/>
+                            <constraint firstItem="rot-Mg-xot" firstAttribute="top" secondItem="Rh0-BL-yeg" secondAttribute="top" constant="50" id="F6a-Q0-uMr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3yf-tb-JJ8" secondAttribute="trailing" id="Lr9-l0-Vcc"/>
+                            <constraint firstItem="Sc0-G4-TfZ" firstAttribute="centerY" secondItem="2hk-io-ine" secondAttribute="centerY" id="N9B-GO-Uqy"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3yf-tb-JJ8" secondAttribute="leading" id="RLe-m1-U97"/>
+                            <constraint firstItem="Sc0-G4-TfZ" firstAttribute="centerX" secondItem="2hk-io-ine" secondAttribute="centerX" id="TDY-Hd-sKv"/>
+                            <constraint firstItem="Sc0-G4-TfZ" firstAttribute="centerX" secondItem="2hk-io-ine" secondAttribute="centerX" id="dBG-uu-FbR"/>
+                            <constraint firstItem="rZ4-jP-rJP" firstAttribute="trailing" secondItem="Rh0-BL-yeg" secondAttribute="trailing" id="ghQ-Lq-pGk"/>
+                            <constraint firstItem="3yf-tb-JJ8" firstAttribute="top" secondItem="Sc0-G4-TfZ" secondAttribute="bottom" constant="20" id="o7N-gq-wEC"/>
+                            <constraint firstItem="rot-Mg-xot" firstAttribute="leading" secondItem="2hk-io-ine" secondAttribute="leadingMargin" constant="-8" id="xWd-Ds-aBB"/>
+                            <constraint firstItem="Sc0-G4-TfZ" firstAttribute="centerY" secondItem="2hk-io-ine" secondAttribute="centerY" id="ynX-Lk-NRp"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="INTERSTITIAL" id="yBm-Ao-Rzs"/>
+                    <connections>
+                        <outlet property="gameText" destination="Sc0-G4-TfZ" id="0kn-2R-jdD"/>
+                        <outlet property="playAgainButton" destination="3yf-tb-JJ8" id="GSv-39-qIf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-628" y="-511"/>
+        </scene>
+    </scenes>
+</document>
